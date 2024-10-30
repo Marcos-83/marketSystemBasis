@@ -7,21 +7,44 @@ angular.module('meuApp', ['ui.router'])
             abstract: true,
             templateUrl: 'app/views/partials/comHeaderFooterEMenu.html', // Template com header, sidebar e footer
         })
+
         .state('main.home', {
             url: '/',
             templateUrl: 'app/views/home.html', // Template da dashboard
             controller: 'testeController' // Controller para a dashboard
         })
+
         .state('main.trocarnome',{
-         url:'/trocarnome/criar', 
+         url:'/exercicios/trocarnome', 
          templateUrl: 'app/views/exercicios/trocarNome.html', // Template da dashboard
          controller: 'trocarNomeController' // Controller para a dashboard
         })
+
         .state('main.calculadora',{
-            url:'/calculadora', 
+            url:'/exercicios/calculadora', 
             templateUrl: 'app/views/exercicios/calculadora.html', // Template da dashboard
             controller: 'calculadoraController' // Controller para a dashboard
            })
+
+           .state('main.contador',{
+            url:'/exercicios/contador', 
+            templateUrl: 'app/views/exercicios/contador.html', // Template da dashboard
+            controller: 'contadorController' // Controller para a dashboard
+           })
+
+           .state('main.calculadoraImc',{
+            url:'/exercicios/calculadoraImc', 
+            templateUrl: 'app/views/exercicios/calculadoraImc.html', // Template da dashboard
+            controller: 'calculadoraImcController' // Controller para a dashboard
+           })
+
+           .state('main.calculadoraDeIdade',{
+            url:'/exercicios/calculadoraDeIdade', 
+            templateUrl: 'app/views/exercicios/calculadoraDeIdade.html', // Template da dashboard
+            controller: 'calculadoraDeIdadeController' // Controller para a dashboard
+           })
+
+
         // .state('login', {
         //     url: '/login',
         //     templateUrl: 'app/partials/login.html', // Apenas um conteúdo sem partials

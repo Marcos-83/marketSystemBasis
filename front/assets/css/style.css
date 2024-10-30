@@ -63,7 +63,7 @@ h1 {
 /* Estilo do menu lateral */
 .sidebar {
     width: 190px;
-    height: 100%;
+    height: 100vh;
     background-color: #34495e; /* Cor sólida */
     color: white;
     padding: 20px; /* Padding consistente */
