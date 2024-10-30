@@ -191,7 +191,7 @@ input[type="button"] {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #28a745;
+    background-color: #0026ff;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -199,7 +199,7 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-    background-color: #218838;
+    background-color: #8da6da;
 }
 
 .result {
