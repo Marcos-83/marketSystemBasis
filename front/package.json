@@ -1,0 +1,17 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "marketSystemBasis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcos Rodrigues",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^18.2.10",
+    "@uirouter/angularjs": "^1.1.1",
+    "@uirouter/core": "^6.1.1",
+    "angular": "^1.8.3"
+  }
+}
