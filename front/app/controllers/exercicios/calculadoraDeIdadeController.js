@@ -2,17 +2,21 @@ angular.module("meuApp")
 .controller('calculadoraDeIdadeController', function ($scope){
 
 $scope.info = {
+    nome: '',
     dataDeNascimento: "",
-    resultado: ""
+    resultado: ''
 };
 
+$scope.pessoas = [];
+
+
 $scope.calcularIdade = function() {
-    DataDeNascimento = new Date($scope.info.DataDeNascimento);
+    dataNascimento = new Date($scope.info.dataDeNascimento);
     hoje = new Date();
 
-    anos = hoje.getFullYear() - dataDeNascimento.getFullYear();
-    meses = hoje.getMonth() - dataDeNascimento.getMonth();
-    dias = hoje.getDate() - dataDeNascimento.getDate();
+    anos = hoje.getFullYear() - dataNascimento.getFullYear();
+    meses = hoje.getMonth() - dataNascimento.getMonth();
+    dias = hoje.getDate() - dataNascimento.getDate();
 
     if (dias < 0) {
         meses --;
@@ -20,10 +24,13 @@ $scope.calcularIdade = function() {
     }
 
     if(meses < 0) {
-        anos --;
+        anos--;
         meses += 12;    
     }
 
+    $scope.info.resultado = `Você tem ${anos} anos, ${meses} meses e ${dias} dias.`;
+
+     $scope.pessoas.push(angular.copy($scope.info));
 
 };
 

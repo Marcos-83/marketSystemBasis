@@ -44,7 +44,11 @@ angular.module('meuApp', ['ui.router'])
             controller: 'calculadoraDeIdadeController' // Controller para a dashboard
            })
 
-
+           .state('main.palindromo',{
+            url:'/exercicios/palindromo', 
+            templateUrl: 'app/views/exercicios/palindromo.html', // Template da dashboard
+            controller: 'palindromoController' // Controller para a dashboard
+           })
         // .state('login', {
         //     url: '/login',
         //     templateUrl: 'app/partials/login.html', // Apenas um conteúdo sem partials
