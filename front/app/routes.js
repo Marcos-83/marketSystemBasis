@@ -49,6 +49,14 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/exercicios/palindromo.html', // Template da dashboard
             controller: 'palindromoController' // Controller para a dashboard
            })
+
+           .state('main.cronogramaDeEstudos',{
+            url:'/exercicios/cronogramaDeEstudos',
+            templateUrl: 'app/views/exercicios/cronogramaDeEstudos.html',
+            controller: 'cronogramaDeEstudosController'
+           })
+
+
         // .state('login', {
         //     url: '/login',
         //     templateUrl: 'app/partials/login.html', // Apenas um conteúdo sem partials
