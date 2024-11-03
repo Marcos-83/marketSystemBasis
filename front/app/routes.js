@@ -50,12 +50,13 @@ angular.module('meuApp', ['ui.router'])
             controller: 'palindromoController' // Controller para a dashboard
            })
 
-           .state('main.cronogramaDeEstudos',{
-            url:'/exercicios/cronogramaDeEstudos',
-            templateUrl: 'app/views/exercicios/cronogramaDeEstudos.html',
-            controller: 'cronogramaDeEstudosController'
+           .state('main.conversor', {
+            url:'/exercicios/conversor',
+            templateUrl: 'app/views/exercicios/conversor.html',
+            controller: 'conversorController'
            })
 
+           
 
         // .state('login', {
         //     url: '/login',
