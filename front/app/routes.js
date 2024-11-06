@@ -56,6 +56,12 @@ angular.module('meuApp', ['ui.router'])
             controller: 'conversorController'
            })
 
+           .state('main.jogoDeAdivinhar', {
+            url:'/exercicios/jogoDeAdivinhar',
+            templateUrl: 'app/views/exercicios/jogoDeAdivinhar.html',
+            controller: 'jogoDeAdivinharController'
+           })
+
            
 
         // .state('login', {
