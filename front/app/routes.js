@@ -56,10 +56,10 @@ angular.module('meuApp', ['ui.router'])
             controller: 'conversorController'
            })
 
-           .state('main.jogoDeAdivinhar', {
-            url:'/exercicios/jogoDeAdivinhar',
-            templateUrl: 'app/views/exercicios/jogoDeAdivinhar.html',
-            controller: 'jogoDeAdivinharController'
+           .state('main.jogoDeAdivinharNm', {
+            url:'/exercicios/jogoDeAdivinharNm',
+            templateUrl: 'app/views/exercicios/jogoDeAdivinharNm.html',
+            controller: 'jogoDeAdivinharNmController'
            })
 
            

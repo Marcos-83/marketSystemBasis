@@ -1,9 +1,10 @@
 angular.module('meuApp')
-.controller("jogoDeAdivinharController", function($scope) {
+.controller("jogoDeAdivinharNmController", function($scope) {
+    
 
 
-$scope.msgDeErro = "";
-$scope.msgDeErroDoJogo = "";
+ $scope.msgDeErro = "";
+ $scope.msgDeErroDoJogo = "";
 
 $scope.config = {
     minimo:0,
@@ -11,7 +12,7 @@ $scope.config = {
     intervalo:10,
     jogoIniciou:0,
     jogoFinalizado: 0
-}
+};
 
 $scope.jogo = {
     numeroAleatorio:0,
@@ -25,18 +26,19 @@ $scope.iniciarJogo = function() {
     podeIniciar = verificarIntervalo();
 
     if(podeIniciar == false) {
-        $scope.msgDeErro = "O intervalo precisa ser de 10 numeros";
+        $scope.msgDeErro = "O intervalo precisa ser de 10 números";
     }
     else {
+        
         $scope.config.jogoIniciou = 1;
-        $scope.jogo.numeroAleatorio = gerarNumeroAleatorio
-        ($scope.config.minimo, $scope.config.maximo);
+        $scope.jogo.numeroAleatorio = gerarNumeroAleatorio($scope.config.minimo, $scope.config.maximo);
     }
 }
 
 verificarIntervalo = function() {
     intervalo = $scope.config.maximo - $scope.config.minimo;
-    if(intervalo < $scope.config.intervalo) {
+    if (intervalo < $scope.config.intervalo) {
+
         return false;
     }
 
@@ -60,11 +62,11 @@ $scope.adivinhar = function(){
 
 $scope.verificarSeAcertou = function() {
     if($scope.jogo.numeroAleatorio == $scope.jogo.tentativa){
-        $scope.msgDeErroDoJogo = `Voce acertou em ${$scope.jogo.qtdTentativa} tentativas!!!`;
-                $scope.config.jogoFinalizou = 1;
+        $scope.msgDeErroDoJogo = `Você acertou em ${$scope.jogo.qtdTentativa} tentativas!!!`;
+                $scope.config.jogoFinalizado = 1;
     }
     else {
-        $scope.msgDeErroDoJogo = 'Voce errou!!';
+        $scope.msgDeErroDoJogo = 'Você errou!!';
         $scope.jogo.qtdTentativa++;
     }
 
@@ -78,7 +80,7 @@ $scope.verificarSeAcertou = function() {
             minimo: 0,
             maximo: 0,
             intervalo: 10,
-            jogoFinalizou: 0,
+            jogoFinalizado: 0,
             jogoIniciou: 0
         };
 
@@ -90,4 +92,4 @@ $scope.verificarSeAcertou = function() {
     }
 
 
-});
+})       
