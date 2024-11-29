@@ -1,5 +1,5 @@
 angular.module('meuApp')
-.controller('cronogramaDeEstudosController', function ($scope) {
+.controller('listaDeEstudosController', function ($scope) {
 
 $scope.estudos = 'blá blá blá';
 

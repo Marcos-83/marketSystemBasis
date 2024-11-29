@@ -6,6 +6,7 @@ angular.module('meuApp', ['ui.router'])
         .state('main', {
             abstract: true,
             templateUrl: 'app/views/partials/comHeaderFooterEMenu.html', // Template com header, sidebar e footer
+            controller: 'testeController'
         })
 
         .state('main.home', {
@@ -62,7 +63,54 @@ angular.module('meuApp', ['ui.router'])
             controller: 'jogoDeAdivinharNmController'
            })
 
+           .state('main.jogoDeAdivinharPalav', {
+            url:'/exercicios/jogoDeAdivinharPalav',
+            templateUrl: 'app/views/exercicios/jogoDeAdivinharPalav.html',
+            controller: 'jogoDeAdivinharPalavController'
+           })
+          
+           .state('main.jogoDaForca', {
+            url:'/exercicios/jogoDaForca',
+            templateUrl: 'app/views/exercicios/jogoDaForca.html',
+            controller: 'jogoDaForcaController'
+           })
+
+           .state('main.listaDeEstudos', {
+            url:'/exercicios/listaDeEstudos',
+            templateUrl: 'app/views/exercicios/listaDeEstudos.html',
+            controller: 'listaDeEstudosController'
+           })
+
+           .state('main.calculadoraComApi',{
+            url:'/comApi/calculadoraComApi', 
+            templateUrl: 'app/views/comApi/calculadoraComApi.html', // Template da dashboard
+            controller: 'calculadoraComApiController' // Controller para a dashboard
+           })
            
+           .state('main.agendaComApi',{
+            url:'/comApi/agendaComApi', 
+            templateUrl: 'app/views/comApi/agendaComApi.html', // Template da dashboard
+            controller: 'agendaComApiController' // Controller para a dashboard
+           })
+
+        .state('main.loginComApi', {
+            url: '/comApi/loginComApi',
+            templateUrl: 'app/views/comApi/loginComApi.html', // Apenas um conteúdo sem partials
+            controller: 'loginComApiController' // Controller para o login
+        })
+
+        // .state('deslogar', {
+        //     url: '/deslogar',
+        //     templateUrl: 'app/views/deslogarComApi.html', // Template da dashboard
+        //     controller: 'deslogarComApiController' // Controller para a dashboard
+        // })
+
+        // .state('registrese', {
+        //     url: '/registrese',
+        //     templateUrl: 'app/views/exerciciosComApi/registrese.html',
+        //     controller: 'RegistreSeController' 
+        // })
+  
 
         // .state('login', {
         //     url: '/login',
