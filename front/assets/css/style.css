@@ -174,3 +174,10 @@ footer p {
     }
 }
 
+th {
+    padding: 5px;
+    text-align: left;
+    background-color: #0011ff;
+    color: white;
+}
+

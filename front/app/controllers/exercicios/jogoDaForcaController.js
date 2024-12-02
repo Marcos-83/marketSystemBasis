@@ -1,5 +1,5 @@
 angular.module("meuApp")
-    .controller("JogoDeForcaController", function ($scope) {
+    .controller("jogoDaForcaController", function ($scope) {
 
         /*
         Serão duas divs, uma para iniciar o jogo e outra para tentar adivinhar a palavra.

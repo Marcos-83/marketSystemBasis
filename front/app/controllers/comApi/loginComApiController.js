@@ -5,9 +5,10 @@ angular.module('meuApp')
         $scope.login = {
             email: '',
             password: ''                   
-        }
+        };
         
-        $scope.logar = function () {
+                $scope.logar = function () {
+                    console.log("chegou:)");
             $url = 'http://localhost:8000/api/user/login';
 
             $http.post($url, $scope.login).then(function (response){

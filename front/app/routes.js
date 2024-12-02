@@ -111,12 +111,6 @@ angular.module('meuApp', ['ui.router'])
         //     controller: 'RegistreSeController' 
         // })
   
-
-        // .state('login', {
-        //     url: '/login',
-        //     templateUrl: 'app/partials/login.html', // Apenas um conteúdo sem partials
-        //     controller: 'LoginController' // Controller para o login
-        // })
         // .state('main.produtos', {
         //     url: '/produtos',
         //     templateUrl: 'app/partials/produtos.html', // Outra página que usa o layout com partials
